@@ -1,12 +1,29 @@
 #ifndef GRAFOENLAZADO_H
 #define GRAFOENLAZADO_H
 
+#include "Lista.h"
+
+
+
+typedef struct Arco;
+
+template <class T>
+typedef struct {
+    T dato;
+    Lista<Arco> arcos;
+} NodoGr;
+
+typedef struct {
+    int valor;
+    NodoGr *punt;
+} Arco;
+
+
 
 template<class T>
 class GrafoEnlazado {
 
 private:
-
 
 public:
     GrafoEnlazado();
